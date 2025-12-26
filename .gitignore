@@ -1,0 +1,19 @@
+# Datasets
+/mt
+*.jpg
+*.jpeg
+*.png
+
+# Keep learned knowledge images despite the above rule
+!learned_knowledge/**/*.jpg
+!learned_knowledge/**/*.jpeg
+!learned_knowledge/**/*.png
+
+# System
+.DS_Store
+__pycache__/
+*.pyc
+
+# Env
+venv/
+.env
