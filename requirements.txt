@@ -1,0 +1,7 @@
+qiskit
+qiskit-machine-learning
+qiskit-algorithms
+scikit-learn
+numpy
+matplotlib
+pillow
