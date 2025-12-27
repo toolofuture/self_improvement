@@ -1,0 +1,201 @@
+/* Evollard Video OS Theme */
+:root {
+    --neon-blue: #00f3ff;
+    --neon-purple: #bc13fe;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-main: #ffffff;
+    --text-dim: #a0a0a0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #000;
+    color: var(--text-main);
+    overflow: hidden;
+    /* App-like feel */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 1. Video Background Layer */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    object-filter: blur(5px);
+    /* For prototype: Animated CSS Gradient as placeholder for video */
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 2. Glassmorphism Container */
+.app-container {
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    grid-template-rows: 60px 1fr 60px;
+    gap: 20px;
+    width: 95vw;
+    height: 90vh;
+    padding: 20px;
+
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* 3. Header */
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* 4. Panels */
+.panel {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--glass-border);
+    overflow-y: auto;
+}
+
+.sidebar-left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.main-view {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+}
+
+.sidebar-right {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.footer {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 5. Main View: Scanner Interface */
+.scanner-frame {
+    width: 100%;
+    height: 100%;
+    border: 2px dashed var(--neon-blue);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: rgba(0, 243, 255, 0.02);
+}
+
+.scanner-frame::before {
+    content: "DRAG & DROP ARTWORK";
+    color: var(--neon-blue);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+/* 6. System Info (Course Data) */
+.system-specs h3 {
+    color: var(--neon-purple);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--neon-purple);
+    padding-bottom: 5px;
+}
+
+.spec-item {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+    color: var(--text-dim);
+}
+
+.spec-item strong {
+    color: #fff;
+    display: block;
+}
+
+/* 7. Buttons */
+.btn {
+    background: transparent;
+    border: 1px solid var(--neon-blue);
+    color: var(--neon-blue);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.btn:hover {
+    background: var(--neon-blue);
+    color: #000;
+    box-shadow: 0 0 15px var(--neon-blue);
+}

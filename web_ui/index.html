@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evollard // Quantum Video OS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 1. Background (Simulated Video Loop) -->
+    <div class="video-bg"></div>
+
+    <!-- 2. Main Glass Interface -->
+    <div class="app-container">
+
+        <!-- Header -->
+        <header>
+            <div class="logo">EVOLLARD <span style="font-size:0.5em; color:var(--neon-purple);">QUANTUM VERIFIER</span>
+            </div>
+            <div class="status">SYSTEM: ONLINE 🟢</div>
+        </header>
+
+        <!-- Sidebar Left: Controls -->
+        <aside class="panel sidebar-left">
+            <h3>OPERATIONS</h3>
+            <br>
+            <button class="btn" style="width:100%; margin-bottom:10px;">Load File...</button>
+            <button class="btn" style="width:100%; margin-bottom:10px;">Calibrate QPU</button>
+            <button class="btn" style="width:100%; border-color:var(--neon-purple); color:var(--neon-purple);">Force
+                Scan</button>
+            <br><br>
+            <div style="font-size:0.7rem; color:var(--text-dim);">
+                MODE: <br>
+                <strong style="color:white;">ENTROPY SCANNER (Nobel)</strong>
+            </div>
+        </aside>
+
+        <!-- Main View: Video/Scan Area -->
+        <main class="panel main-view">
+            <div class="scanner-frame">
+                <!-- Drop Zone / Result Display -->
+                <div id="scan-overlay"></div>
+            </div>
+            <!-- Timeline (Premiere Pro Style) -->
+            <div
+                style="position:absolute; bottom:20px; left:20px; right:20px; height:40px; background:rgba(255,255,255,0.1); border-radius:4px; display:flex; align-items:center;">
+                <div style="width:30%; height:100%; background:var(--neon-blue); opacity:0.3;"></div>
+                <div style="color:white; font-size:0.6rem; padding-left:10px;">Quantum Frame: 00:04:12</div>
+            </div>
+        </main>
+
+        <!-- Sidebar Right: System Info (Course Data) -->
+        <aside class="panel sidebar-right system-specs">
+            <h3>SYSTEM SPECIFICATIONS</h3>
+            <div class="spec-item">
+                <strong>Core Engine</strong>
+                IBM Qiskit 1.0 (Python 3.14)
+            </div>
+            <div class="spec-item">
+                <strong>Algorithm</strong>
+                Entanglement Entropy Scanner
+            </div>
+
+            <br>
+            <h3>UI/UX ARCHITECTURE</h3>
+            <!-- Embedded Course Info as 'Architecture' -->
+            <div class="spec-item">
+                <strong>Framework Source</strong>
+                MBC Academy UX/UI Expert Course (Type A)
+            </div>
+            <div class="spec-item">
+                <strong>Design Period</strong>
+                2025.12.31 ~ 2026.05.21
+            </div>
+            <div class="spec-item">
+                <strong>Core Modules</strong>
+                - Digital Design (Photoshop/Illustrator)<br>
+                - Video Motion (Premiere/AfterEffects)<br>
+                - Web Publishing (HTML/CSS/JS)
+            </div>
+            <div class="spec-item">
+                <strong>Supervisor</strong>
+                Moon Seong-ryong (Director)
+            </div>
+        </aside>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <span style="font-size:0.7rem; color:var(--text-dim);">© 2025 EVOLLARD QUANTUM SYSTEMS // POWERED BY
+                SELF-IMPROVEMENT ENGINE</span>
+        </footer>
+
+    </div>
+
+    <!-- Optional JS (Placeholder) -->
+    <!-- <script src="js/app.js"></script> -->
+</body>
+
+</html>
